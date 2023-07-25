@@ -7,6 +7,12 @@ use Livewire\Component;
 class Counter extends Component
 {
     public $count = 0;
+    public $username = '';
+
+    // se ejecuta al pintar el componente
+    public function mount(){
+        $this->fill(['count' => 20]);
+    }
 
     public function increment(){
         $this->count++;
